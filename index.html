@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .container {
+        background-color: rgb(249, 238, 200);
+        padding: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+      }
+
+    .card {
+        height: 450px;
+        width: 320px;
+        margin: 15px;
+        margin-top: 50px;
+        background-color: white;
+        background-color: rgb(247, 187, 67);
+        box-shadow: 0px 3px 6px 2px rgb(152, 152, 152);
+        margin-left: 90px;
+        /* rgb(247, 187, 67) */
+    }
+    .card-img {
+        width: 190px;
+        height: 180px;
+        border-radius: 50%;
+        margin-top: 10px;
+        display: block;
+        margin-left: 40px;
+        border: 1px solid black;
+      }
+      .card-img-body {
+        width: 100%;
+        height: 200px;
+        margin-left: 30px;
+        margin-top: 20px;
+      }
+      .card-body {
+        flex-grow: 1;
+        padding-left: 20px;
+      }
+      .name {
+        text-align: center;
+        font-size: 35px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: rgb(72, 9, 9);
+      }
+      .age {
+        font-size: 30px;
+        color: rgb(51, 50, 50);
+        margin-top: 7px;
+        text-align: center;
+      }
+      .email-id {
+        font-size: 22px;
+        color: rgb(123, 122, 122);
+        text-decoration: underline;
+        margin-top: 5px;
+        font-weight: 900;
+        text-align: center;
+      }
+      .tagline {
+        font-size: 30px;
+        margin-top: 5px;
+        color: rgb(161, 90, 90);
+        text-align: center;
+        margin-right: 20px;
+      }
+</style>
+
+<body>
+    <div class="container" id="container">
+   
+    </div>
+    <script>
+      
+        const list = [
+            {
+                "name": "John Doe",
+                "age": 25,
+                "email": "john@example.com",
+                "ImageUrl": "john-Doe.png",
+                "tagline": "Living life to the fullest!"
+            },
+            {
+                "name": "Jane Smith",
+                "age": 30,
+                "email": "jane@example.com",
+                "ImageUrl": "Jane-Smith.jpg",
+                "tagline": "Exploring the world, one step at a time."
+            },
+            {
+                "name": "Michael Johnson",
+                "age": 28,
+                "email": "michael@example.com",
+                "ImageUrl": "Michael-Johnson.jpg",
+                "tagline": "Passionate about coding and coffee."
+            },
+            {
+                "name": "Emily Davis",
+                "age": 22,
+                "email": "emily@example.com",
+                "ImageUrl": "Emily-Davis.jpg",
+                "tagline": "Nature lover and aspiring artist."
+            },
+            {
+                "name": "Robert Brown",
+                "age": 35,
+                "email": "robert@example.com",
+                "ImageUrl": "Robert-Brown.webp",
+                "tagline": "Always seeking new challenges."
+            },
+            {
+                "name": "Sophia Martinez",
+                "age": 27,
+                "email": "sophia@example.com",
+                "ImageUrl": "Sophia-Martinez.jpg",
+                "tagline": "Believer in the power of kindness."
+            },
+            {
+                "name": "William Thompson",
+                "age": 29,
+                "email": "william@example.com",
+                "ImageUrl": "William-Thompson.jpg",
+                "tagline": "Striving for a better tomorrow."
+            },
+            {
+                "name": "Olivia Wilson",
+                "age": 24,
+                "email": "olivia@example.com",
+                "ImageUrl": "Olivia-Wilson.jpg",
+                "tagline": "Making memories around the world."
+            },
+            {
+                "name": "James Harris",
+                "age": 31,
+                "email": "james@example.com",
+                "ImageUrl": "james-Harris.jpg",
+                "tagline": "Living with no regrets."
+            },
+            {
+                "name": "Ava Turner",
+                "age": 26,
+                "email": "ava@example.com",
+                "ImageUrl": "Ava-Turner.jpg",
+                "tagline": "Embracing the beauty of simplicity."
+            }
+        ]
+
+
+
+
+
+
+       
+        for (let i = 0; i < list.length; i++) {
+        container.innerHTML =
+          container.innerHTML +
+          `   <div class="card">
+          <div class="card-img-body">
+            <img src="${list[i].ImageUrl}" alt=""  class="card-img">
+          </div>
+           <div class="card-body">
+            <div class="name" >${list[i].name}</div>
+            <div class="age" > I Am ${list[i].age} year old</div>
+            <div class="email-id">${list[i].email}</div>
+            <div class="tagline"> ${list[i].tagline}</div>
+            </div>
+        </div>
+            `;
+      }
+    </script>
+
+
+</body>
+
+</html>
